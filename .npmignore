@@ -1,0 +1,35 @@
+# Development files
+src/
+swagger.json
+tsconfig.json
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Tests
+*.test.ts
+*.spec.ts
+__tests__/
+test/
+
+# Documentation (keep README.md)
+*.md
+!README.md
+
+# Build artifacts
+dist/
+node_modules/
+.DS_Store
+
+# Misc
+.env
+.env.*
+!.env.example

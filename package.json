@@ -1,15 +1,40 @@
 {
   "name": "ozon-seller-api-client",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "generate-from-https-not-working": "npx swagger-typescript-api generate --path https://docs.ozon.ru/api/seller/swagger.json --output ./src/ --name OzonSellerAPI.ts --responses --add-readonly --route-types --enum-names-as-values --extract-request-params --extract-request-body --extract-response-body --extract-response-error --extract-enums --api-class-name OzonSellerAPI --patch --single-http-client",
-    "generate": "npx swagger-typescript-api generate --path ./swagger.json --output ./src/ --name OzonSellerAPI.ts --responses --add-readonly --route-types --enum-names-as-values --extract-request-params --extract-request-body --extract-response-body --extract-response-error --extract-enums --api-class-name OzonSellerAPI --patch --single-http-client",
-    "generate-modular": "npx swagger-typescript-api generate --path ./swagger.json --output ./src/ozon-api/modular/ --name OzonSellerAPI.ts --responses --add-readonly --route-types --enum-names-as-values --extract-request-params --extract-request-body --extract-response-body --extract-response-error --extract-enums --api-class-name OzonSellerAPI --patch --single-http-client --modular"
+  "description": "TypeScript client for Ozon Seller API",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
-  "keywords": [],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "generate": "npx swagger-typescript-api generate --path ./swagger.json --output ./src/ --name OzonSellerAPI.ts --responses --add-readonly --route-types --enum-names-as-values --extract-request-params --extract-request-body --extract-response-body --extract-response-error --extract-enums --api-class-name OzonSellerAPI --patch --single-http-client",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ozon",
+    "api",
+    "seller",
+    "client",
+    "typescript",
+    "rest"
+  ],
   "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
