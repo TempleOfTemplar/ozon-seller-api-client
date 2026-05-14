@@ -1,5 +1,5 @@
 {
-  "name": "ozon-seller-api-client",
+  "name": "generated-ozon-seller-api-client",
   "version": "1.0.0",
   "description": "TypeScript client for Ozon Seller API",
   "type": "module",
@@ -36,5 +36,8 @@
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
