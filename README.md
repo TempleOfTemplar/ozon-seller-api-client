@@ -195,7 +195,8 @@ MIT - see [LICENSE](LICENSE) for details.
 
 - [Ozon Seller API Documentation](https://developer.ozon.ru/)
 - [Ozon for Developers](https://dev.ozon.ru/)
-- [Report Issues](https://github.com/your-repo/issues)
+- [Repository](https://github.com/TempleOfTemplar/ozon-seller-api-client)
+- [Report Issues](https://github.com/TempleOfTemplar/ozon-seller-api-client/issues)
 
 ## Contributing
 
