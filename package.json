@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generate-from-https-not-working": "npx swagger-typescript-api generate --path https://docs.ozon.ru/api/seller/swagger.json --output ./src/ --name OzonSellerAPI.ts --responses --add-readonly --route-types --enum-names-as-values --extract-request-params --extract-request-body --extract-response-body --extract-response-error --extract-enums --api-class-name OzonSellerAPI --patch --single-http-client",
+    "generate": "npx swagger-typescript-api generate --path ./swagger.json --output ./src/ --name OzonSellerAPI.ts --responses --add-readonly --route-types --enum-names-as-values --extract-request-params --extract-request-body --extract-response-body --extract-response-error --extract-enums --api-class-name OzonSellerAPI --patch --single-http-client",
+    "generate-modular": "npx swagger-typescript-api generate --path ./swagger.json --output ./src/ozon-api/modular/ --name OzonSellerAPI.ts --responses --add-readonly --route-types --enum-names-as-values --extract-request-params --extract-request-body --extract-response-body --extract-response-error --extract-enums --api-class-name OzonSellerAPI --patch --single-http-client --modular"
   },
   "keywords": [],
   "author": "",
